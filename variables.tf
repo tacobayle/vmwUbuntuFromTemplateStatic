@@ -20,7 +20,6 @@ variable "vcenter" {
 }
 
 variable "ubuntu" {
-  type = map
   default = {
     name = "ubuntuHost"
     cpu = 4
