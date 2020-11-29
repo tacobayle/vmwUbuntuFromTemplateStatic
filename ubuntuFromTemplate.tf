@@ -5,7 +5,7 @@ data "template_file" "ubuntu_userdata" {
     pubkey = file(var.ubuntu.public_key_path)
     username = var.ubuntu.username
     netplanFile = var.ubuntu.netplanFile
-    ipCidrMgmt = var.ubuntu.ipCidrMgmt
+    ipCidrMgmt = element(var.ubuntu.ipCidrMgmt, count.index)
     defaultGw = var.ubuntu.defaultGw
     dns = var.ubuntu.dns
   }
